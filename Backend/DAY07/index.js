@@ -7,7 +7,8 @@ const BookStore = [
     {id:2, name:"Friends", author: "Vikas"},
     {id:3 , name:"Nexus", author:"Rohit"},
     {id:4 , name:"DSA", author:"Maharaj"},
-    {id:5, name:"Prem Kahani", author:"Rohan"}
+    {id:5, name:"Prem Kahani", author:"Rohan"},
+    {id:6, name:"Heloo", author: "Vikas"},
 ]
 
 app.use(express.json());
@@ -15,8 +16,10 @@ app.use(express.json());
 // localhost:3000/book/3
 
 app.get("/book", (req,res)=>{
+    console.log(req.query);
 
-    res.send(BookStore);
+    const Book = BookStore.filter(info => info.author === req.query.author);
+    res.send(Book);
 })
 
 app.get("/book/:id", (req,res)=>{
@@ -33,7 +36,6 @@ app.post("/book", (req,res)=>{
     res.send("Data Saved Successfully");
 })
 
-
 app.patch("/book", (req,res)=>{
     console.log(req.body);
 
@@ -49,10 +51,37 @@ app.patch("/book", (req,res)=>{
 })
 
 
+app.put("/book", (req,res)=>{
+
+    const Book = BookStore.find(info => info.id === req.body.id);
+    
+    Book.author = req.body.author;
+    Book.name = req.body.name;
+
+    res.send("Changes Updated Succesfully");
+})
+
+app.delete("/book/:id", (req,res)=>{
+
+    const id = parseInt(req.params.id);
+    
+ 
+    const index = BookStore.findIndex(info => info.id === id);
+    
+    console.log(index);
+    BookStore.splice(index,1);
+    res.send("Successfully Deleted");
+
+})
+
+
+
+
+
+
 
 
 app.listen(3000, ()=>{
     console.log("Listening at port 3000");
 })
 
- 
