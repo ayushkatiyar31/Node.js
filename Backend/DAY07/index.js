@@ -34,6 +34,19 @@ app.post("/book", (req,res)=>{
 })
 
 
+app.patch("/book", (req,res)=>{
+    console.log(req.body);
+
+   const Book = BookStore.find(info => info.id === req.body.id);
+   
+   if(req.body.author)
+   Book.author = req.body.author;
+
+   if(req.body.name)
+   Book.name = req.body.name;
+
+   res.send("Patch updated")
+})
 
 
 
