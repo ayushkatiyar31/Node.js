@@ -7,6 +7,7 @@ const {Auth} = require("./middleware/auth")
 // Database: array
 
 
+
 app.use(express.json());
 
 const FoodMenu = [
