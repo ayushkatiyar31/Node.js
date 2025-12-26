@@ -21,6 +21,9 @@ async function main() {
 const findResult = await collection.find({}).toArray();
 console.log('Found documents =>', findResult);
 
+const insertResult = await collection.insertMany([{ a: 1 }, { a: 2 }, { a: 3 }]);
+console.log('Inserted documents =>', insertResult);
+
   return 'done.';
 }
 
