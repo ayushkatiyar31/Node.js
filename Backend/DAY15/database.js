@@ -1,20 +1,12 @@
 const mongoose = require('mongoose');
 
+
 async function main() {
 
  await mongoose.connect("mongodb+srv://ayushkatiyar:Ayush%40123@codingadda.y7en9oe.mongodb.net/BookStore");
-
-const userSchema = new Schema({
-  name: String,
-  age: Number,
-  city: String,
-  gender: String
-
-})
-
+ 
 // Create a Model === Create a collection(Create a table)
-
-const User =  mongoose.model("User", userSchema);
+ 
 
 // Create a Document === Create a object
 
