@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+const User = require("./Models/users"); 
 
 async function main() {
 
@@ -13,8 +13,6 @@ async function main() {
 const user1 = new User({name:"Ayush", age:21, city:"Lucknow",gender:"Male"});
 await user1.save();
 
-
 }
-main()
-.then(() => console.log("Connected to DB"))
-.catch((err) => console.log("Error"));
+
+module.exports = main;
