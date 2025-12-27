@@ -6,7 +6,7 @@ async function main() {
  await mongoose.connect("mongodb+srv://ayushkatiyar:Ayush%40123@codingadda.y7en9oe.mongodb.net/BookStore");
  
 // Create a Model === Create a collection(Create a table)
- 
+
 
 // Create a Document === Create a object
 
