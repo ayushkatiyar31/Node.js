@@ -19,9 +19,7 @@ console.log(hashpass);
 
 // console.log(hashpass);
 }
-
-// $2b$10$N5ehmB3b5kW1D3Mdhpl5JO
-// $2b$10$N5ehmB3b5kW1D3Mdhpl5JOr9WCkz9sqnsdjUtut8BgG5rFTzOyqcO
+ 
 
 Hashing();
 
