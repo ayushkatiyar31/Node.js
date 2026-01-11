@@ -3,7 +3,7 @@ const User = require("./Models/users");
 
 async function main() {
 
- await mongoose.connect("mongodb+srv://ayushkatiyar:Ayush%40123@codingadda.y7en9oe.mongodb.net/BookStore");
+ await mongoose.connect(" ");
  
 // Create a Model === Create a collection(Create a table)
 
