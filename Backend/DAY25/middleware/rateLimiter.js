@@ -4,9 +4,6 @@ const redisClient = require('../config/redis');
 const rateLimiter = async (req,res,next)=>{
 
     try{
-
-
-        
         const ip = req.ip;
         console.log(ip);
 
@@ -15,8 +12,7 @@ const rateLimiter = async (req,res,next)=>{
         // nahi karta
         // set method redisClient.set(ip,`1:${Date.now()/1000}`)
         // await redisClient.expire(3600);
-
-
+        
         // Exist karta hga:
         // get
 
