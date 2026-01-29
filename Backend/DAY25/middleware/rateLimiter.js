@@ -4,6 +4,7 @@ const redisClient = require('../config/redis');
 const rateLimiter = async (req,res,next)=>{
 
     try{
+        
         const ip = req.ip;
         console.log(ip);
 
