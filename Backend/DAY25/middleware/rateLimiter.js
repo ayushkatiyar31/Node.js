@@ -14,7 +14,7 @@ const rateLimiter = async (req,res,next)=>{
         // await redisClient.expire(3600);
         
         // Exist karta hga:
-        // get
+    
 
         const number_of_request = await redisClient.incr(ip);
 
